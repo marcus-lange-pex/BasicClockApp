@@ -14,11 +14,11 @@ steps:
   
 - task: AzureVmssDeployment@0
   inputs:
-    azureSubscription: 'ca-jagord-demo-test(f9b5da45-54cc-42d3-a58b-87adf6ad27ad)'
+    azureSubscription: 'Azure-Pexeda-Free(44996229-89f0-490f-993c-e5e1b8de74c3)'
     action: 'Update image'
     vmssName: 'vmclock'
     vmssOsType: 'Linux'
-    imageUrl: '/subscriptions/f9b5da45-54cc-42d3-a58b-87adf6ad27ad/resourceGroups/vmclock/providers/Microsoft.Compute/images/vmclockimg'
+    imageUrl: '/subscriptions/44996229-89f0-490f-993c-e5e1b8de74c3/resourceGroups/vmclock/providers/Microsoft.Compute/images/vmclockimg'
     customScriptsDirectory: '/root'
     customScript: 'bash install.sh'
     customScriptsStorageAccount: 'vmdeployclock'
