@@ -16,7 +16,7 @@ steps:
   inputs:
     azureSubscription: 'Azure-Pexeda-Free(44996229-89f0-490f-993c-e5e1b8de74c3)'
     action: 'Update image'
-    vmssName: 'vmclock'
+    vmssName: 'ubunto-scale-set'
     vmssOsType: 'Linux'
     imageUrl: '/subscriptions/44996229-89f0-490f-993c-e5e1b8de74c3/resourceGroups/vmclock/providers/Microsoft.Compute/images/vmclockimg'
     customScriptsDirectory: '/root'
