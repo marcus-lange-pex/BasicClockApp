@@ -17,25 +17,26 @@ apt-get install nodejs npm build-essential git -y
 
 echo "Downloading Repo"
 
-  mkdir /react-clock-basic 
-  git clone https://github.com/jaydestro/react-clock-basic.git /react-clock-basic 
-  cd /react-clock-basic 
+  mkdir /pexeda-BasicClockApp
+  https://github.com/marcus-lange-pex/pexeda-BasicClockApp.git /pexeda-BasicClockApp
+
+  cd /pexeda-BasicClockApp 
   npm install 
 
 
 
 # Publish and start application
 sudo apt-get install -y supervisor 
-touch /etc/supervisor/conf.d/react-clock-basic.conf
+touch /etc/supervisor/conf.d/pexeda-BasicClockApp.conf
 
-cat >> /etc/supervisor/conf.d/react-clock-basic.conf << 'EOF'
-[program:react-clock-basic]
+cat >> /etc/supervisor/conf.d/pexeda-BasicClockApp.conf << 'EOF'
+[program:pexeda-BasicClockApp]
 command=npm run serve
-directory=/react-clock-basic/
+directory=/pexeda-BasicClockApp/
 autostart=true
 autorestart=true
-stderr_logfile=/var/log/reach-clock-basic.err.log
-stdout_logfile=/var/log/reach-clock-basic.out.log
+stderr_logfile=/var/log/pexeda-BasicClockApp.err.log
+stdout_logfile=/var/log/pexeda-BasicClockApp.out.log
 environment=
 stopsignal=INT
 EOF
