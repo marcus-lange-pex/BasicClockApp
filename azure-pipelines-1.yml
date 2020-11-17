@@ -37,3 +37,14 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure-Pexeda-Free'
+    appType: 'webAppContainer'
+    WebAppName: 'pexeda-clock'
+    DockerNamespace: 'myDemoforpexeda'
+    DockerRepository: 'pexedaclock'
+    DockerImageTag: '9'
